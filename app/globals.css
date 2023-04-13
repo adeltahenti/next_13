@@ -20,6 +20,10 @@ h1 {
   @apply text-[1.5rem] mb-[0.5rem] font-bold;
 }
 
+.logo a:hover {
+  @apply text-[#F5E29F];
+}
+
 .links a {
   @apply my-0 mx-[0.5rem];
 }
