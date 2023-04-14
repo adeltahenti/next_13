@@ -12,7 +12,12 @@ async function fetchGitHubUsers() {
 
 async function fetchRepos() {
   const response = await fetch(
-    'https://api.github.com/users/adeltahenti/repos'
+    'https://api.github.com/users/adeltahenti/repos',
+    {
+      next: {
+        revalidate: 60,
+      },
+    }
   );
 
   await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait 1 second
@@ -22,7 +27,11 @@ async function fetchRepos() {
 }
 
 async function fetchRepos2(user) {
-  const response = await fetch(`https://api.github.com/users/${user}/repos`);
+  const response = await fetch(`https://api.github.com/users/${user}/repos`, {
+    next: {
+      revalidate: 60,
+    },
+  });
 
   await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait 1 second
 

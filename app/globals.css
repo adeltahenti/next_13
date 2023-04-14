@@ -83,3 +83,47 @@ h2 {
 .spinner {
   @apply border-4 border-gray-700 border-l-[blue] rounded-[50%] w-[40px] h-[40px] animate-spin;
 }
+
+.card {
+  @apply border-[#ccc] rounded-[4px] p-[1rem] m-[1rem] bg-white text-[#333];
+}
+
+.card h2 {
+  @apply text-[1.5rem] mt-0 mb-2 no-underline;
+}
+
+.card .card-content {
+  @apply mt-[1rem];
+}
+
+.card .card-stats {
+  @apply flex my-[1rem] mx-0;
+}
+
+.card .card-stat {
+  @apply flex items-center mr-[1rem];
+}
+
+.card .card-stat svg {
+  @apply mr-[0.5rem];
+}
+
+.card .card-stat span {
+  @apply text-[0.9rem];
+}
+
+.courses .card {
+  @apply mb-0;
+}
+
+.btn {
+  @apply inline-block bg-[#0070f3] text-white py-[0.5rem] px-[1rem] rounded-[4px] text-[1rem] cursor-pointer;
+}
+
+.btn:hover {
+  @apply bg-[#0058b7] text-white;
+}
+
+.btn-back {
+  @apply inline-block bg-[#f4f4f4] text-[#333] py-[0.5rem] px-[1rem] rounded-[4px] text-[0.8rem] cursor-pointer mb-[1.3rem];
+}
